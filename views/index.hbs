@@ -1,0 +1,100 @@
+
+<div class="homebac">
+    <div class="container">
+<div class="row" style="padding: 20px 0px;">
+    <div class="col-md-9">
+        <h1>Hi! I'm Shashwath K Ramesh.</h1>
+        <p>I am Full Stack Developer and Entreprenuer,I'm very passionate about web ,graphics and coding ,Especially frontend,and i am well versed with few technologies,frameworks and CMS for building Websites and mobile applications etc.</p>
+    </div>
+    <div class="col-md-3">
+      <img class="img-fluid" src="/images/Profile image 320.jpg">
+  </div>
+</div>
+</div>
+</div>
+{{!-- subscribe  --}}
+<section class="subscribe-area pb-50 pt-70">
+<div class="container">
+	<div class="row">
+
+					<div class="col-md-4">
+						<div class="subscribe-text mb-15">
+							{{!-- <span>JOIN OUR NEWSLETTER</span> --}}
+							<h2>Subscribe To My Newsletter</h2>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="subscribe-wrapper subscribe2-wrapper mb-15">
+							<div class="subscribe-form">
+								<form action="#">
+									<input placeholder="enter your email address" type="email">
+									<button>Subscribe <i class="fas fa-long-arrow-alt-right"></i></button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+</div>
+</section>
+
+<!-- Start: Recent projects -->
+<br>
+<div class="container">
+<div class="row">
+    <div class="col-md-9">
+        <h2>Recent Projects</h2>
+    </div>
+    <div class="col-md-3 text-right">
+       <a class="view-links" href="/projects">View All</a>
+    </div>
+</div>
+
+
+<div class="row" style="padding: 20px 0px;">
+    <!-- render the projects you got from the server -->
+    {{#each projects}}
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <a  href="/projects/{{_id}}">
+                    <img src="{{image}}" class="card-img-top" alt="...">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">{{title}}</h5>
+                    <p class="card-text">{{description}}</p>
+                    <a href="/projects/{{_id}}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>
+<!-- End: Recent projects -->
+
+<!-- Start: Recent posts -->
+<hr>
+<div class="row">
+    <div class="col-md-9">
+        <h2>Recent Posts</h2>
+    </div>
+    <div class="col-md-3 text-right">
+        <a class="view-links" href="/blog">View All</a>
+    </div>
+</div>
+<div class="row" style="padding: 20px 0px;">
+    <!-- render the projects you got from the server -->
+    {{#each posts}}
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <a href="/projects/{{_id}}">
+                    <img src="{{image}}" class="card-img-top" alt="...">
+                </a>
+                <div class="card-body">
+                    <a href="/blog/{{_id}}">
+                        <h5 class="card-title">{{title}}</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>
+</div>
