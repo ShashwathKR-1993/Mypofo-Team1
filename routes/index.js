@@ -88,6 +88,11 @@ router.get('/blog/:id', function(req, res){
     })
   });
 })
+// about page
+router.get('/about', function(req, res){
+  res.render('about');
+})
+
 
 // contact page 
 router.get('/contact', function(req, res){
