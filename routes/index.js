@@ -4,7 +4,8 @@ const { check, validationResult } = require('express-validator');
 var MongoClient = require('mongodb').MongoClient;
 var ObjectId = require('mongodb').ObjectID;
 
-var url = "mongodb://localhost:27017/";
+var url = "mongodb://127.0.0.1:27017/";
+
 
 /* GET home page. */
 router.get('/',function(req,res){
